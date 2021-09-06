@@ -29,7 +29,7 @@ li:first-letter {
 }
 
 .btn {
-  background-color: rgb(155, 192, 248);
+  background-color: rgb(135, 181, 250);
 }
 
 .container {
@@ -37,7 +37,7 @@ li:first-letter {
   margin: 10px auto;
   padding: 0px 30px;
   border-radius: 5px;
-  border: 2px solid rgb(155, 192, 248);
+  border: 2px solid rgb(135, 181, 250);
   background-color: white;
 }
 .weather-app-wrapper {
