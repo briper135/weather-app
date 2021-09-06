@@ -68,7 +68,21 @@ function displayCelsiusTemperature(event){
 
 }
 
+function searchLocation(position){
+    let apiKey = "d1bbd379750cfbcbbe5aa91d99dcdec2";
+    let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+    let apiUnits = "metric";
+    let longitude = position.coords.longitude;
+    let latitude = position.coords.latitude;
+    let apiUrl = `${apiEndpoint}?lat=${latitude}&lon=${longitude}&units=${apiUnits}&appid=${apiKey}`;
+    axios.get(apiUrl).then(displayTemperature);
+}
 
+
+function getCurrentLocation(event){
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+}
 
 
 let celsiusTemperature = null;
@@ -85,6 +99,7 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-
+let currentLocationButton = document.querySelector("#here");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 search("New York");
