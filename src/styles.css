@@ -37,8 +37,7 @@ li:first-letter {
   margin: 10px auto;
   padding: 0px 30px;
   border-radius: 5px;
-  border: 2px solid rgb(135, 181, 250);
-  background-color: white;
+  border: none;
 }
 .weather-app-wrapper {
   max-width: 600px;
@@ -47,8 +46,9 @@ li:first-letter {
 
 .weather-app {
   padding: 20px;
-  border: 2px solid white;
+  border: 2px solid rgb(135, 181, 250);
   border-radius: 5px;
+  background-color: white;
 }
 
 .overview {
@@ -78,4 +78,23 @@ li:first-letter {
   color: rgb(35, 35, 35);
   cursor: default;
   text-decoration: none;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
+.weather-forecast-temperatures-min {
+  opacity: 0.5;
 }
