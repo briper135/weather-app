@@ -105,16 +105,6 @@ function displayForecast(response){
 }
 
 
-function displayCelsiusTemperature(event){
-    event.preventDefault();
-    fahrenheitLink.classList.remove("active");
-    celsiusLink.classList.add("active");
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(celsiusTemperature);
-
-
-}
-
 function searchLocation(position){
     let apiKey = "d1bbd379750cfbcbbe5aa91d99dcdec2";
     let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
@@ -132,22 +122,11 @@ function getCurrentLocation(event){
 }
 
 
-let celsiusTemperature = null;
-
-
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
 let currentLocationButton = document.querySelector("#here");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
 
 search("New York");
